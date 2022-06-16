@@ -10,9 +10,6 @@ input{
 button{
   margin-right: 1vw;
 }
-li:hover{
-  font-weight: bold;
-}
 #preview{
   display: none;
 }
@@ -22,4 +19,7 @@ li:hover{
 #root{
   padding-bottom: 5vh;
   background-color: #9c97af;
+}
+button:hover{
+  font-weight: bold;
 }

@@ -45,16 +45,19 @@ const AssignText = (e) => {
   }
   return (
   <>
-    <div className={`container my-3`} >
+    <div className={`container my-3 `} >
       
-        <label className= {`mx-3 bg-${props.mode} text-${props.mode === 'light' ? 'dark' : 'light'}`}htmlFor="textarea"> <b>Input your text here </b>         
+        <label className= {`p-3 bg-${props.mode} text-${props.mode === 'light' ? 'dark' : 'light'}`}htmlFor="textarea"> <b>Input your text here </b>         
           <textarea name="textInput" id="textarea" className={`container mt-3 mb-0 containe bg-${props.mode} text-${props.mode === 'light' ? 'dark' : 'light'}`} onChange={AssignText} placeholder='Enter text here' cols={150} rows={10} ></textarea>
         </label>
-        <button disabled = {text.length === 0} className={`my-3 border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={UpperCaseConvert}>To UPPERCASE</button>
-        <button  disabled = {text.length === 0} className={`my-3 border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={LowerCaseConvert}>To LOWERCASE</button>
-        <button  disabled = {text.length === 0} className={`my-3 border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={CopyText}>Copy</button>
-        <button  disabled = {text.length === 0} className={`my-3 border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={ClearTextArea}>Clear textarea</button>
-        <button  disabled = {text.length === 0} className={`my-3 border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={RemoveSpace}>Remove extra space</button>
+        
+        <div className='row my-3 container  '>
+          <button disabled = {text.length === 0} className={`col-sm border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={UpperCaseConvert}>To UPPERCASE</button>
+          <button  disabled = {text.length === 0} className={`col-sm border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={LowerCaseConvert}>To LOWERCASE</button>
+          <button  disabled = {text.length === 0} className={`col-sm border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={CopyText}>Copy</button>
+          <button  disabled = {text.length === 0} className={`col-sm border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={ClearTextArea}>Clear textarea</button>
+          <button  disabled = {text.length === 0} className={`col-sm border-${props.mode} btn btn-${props.mode} border-${props.mode === 'light' ? 'dark' : 'light'}`} onClick={RemoveSpace}>Remove extra space</button>
+        </div>
         
         <div className={`p-2 my-3  bg-${props.mode} text-${props.mode === 'light' ? 'dark' : 'light'}`} >
           <h2>Basic Information</h2>
